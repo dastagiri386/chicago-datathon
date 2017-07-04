@@ -1,0 +1,60 @@
+#+TITLE: Datathon Report
+#+AUTHOR: Team 6
+#+OPTIONS: toc:nil num:2 ^:nil
+
+#+begin_latex
+  \begin{abstract}
+  Abstract goes here.
+  \end{abstract}
+#+end_latex
+
+#+NAME: Code: 
+#+begin_src R :exports none
+  source("../code/setup.R")
+#+end_src
+
+* Introduction
+** Objective
+The goal of our analysis is to study the correlation between layoffs
+and the number of job postings post-recession ranging from August 2007
+to December 2015. Specifically, we study the trends across the
+different states in the U.S. using choropleth visualization. 
+
+** Importance
+Answering such a question would help us understand how each state
+recovered post-recession. The number of job postings is a proxy for
+how opportunistic a particular state is, in terms of the job market. 
+
+** Datasets
+We used the following tables:
+- Jobs
+- Econ_state
+- sectors
+- companies
+* Non-technical Summary
+** Key findings
+There are strong reasonable differences between the states. We observe
+that in the period following the recession, specifically in December
+2009, the number of job postings in US increased 10-fold. However, the
+unemployment rate was still as high as 13%+. Interestingly, the
+unemployment rate in Texas at this time was less than 5%. 
+
+#+CAPTION: Number of employees per state
+[[./employee_state.png]]
+
+* Technical Summary
+We aggregated the monthly data for each state and across time period
+2007-2015. Below, we have created two interactive choropleth
+visualizations.
+- [[../postings/animated_choropleth.html][Job posting trend]]
+- [[../ur/animated_choropleth.html][Unemployment]]
+
+* Appendix
+** Future directions
+We also observed relevant skills from various job descriptions, and
+how they evolved post-recession. Due to time limitation, we did not
+complete this analysis.
+** COMMENT Figure
+#+CAPTION: Number of employees per sector
+[[./employment_sector.png]]
+
